@@ -32,4 +32,4 @@ class HandRigger:
         self.blendControllerSize = newBlendControllerSize
 
     def RigLimb(self):
-        print("Start Rigging!!!")
+        print("Start Rigging!!!!")
