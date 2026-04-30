@@ -1,5 +1,5 @@
 from core.MayaWidget import MayaWidget 
-from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QLineEdit, QTextEdit, QPushButton, QLabel
+from PySide6.QtWidgets import QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton, QLabel
 import maya.cmds as mc
 from maya.OpenMaya import MVector
 from PySide6.QtWidgets import QColorDialog
