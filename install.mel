@@ -32,7 +32,14 @@ global proc AddPluginToShelf(string $scriptName, string $label)
     $addPathCmd += "if \"" + $srcDir + "\" not in sys.path:\n";
     $addPathCmd += "\tsys.path.append(\"" + $srcDir + "\")\n"; 
 
-    string $command = $addPathCmd + "exec(open(\"" + $toolsDir + $scriptName + ".py" + " \").read())";
+    string $command = 
+    "import sys\n" +
+    "if \"" + $srcDir + "\" not in sys.path:\n" +
+    "    sys.path.append(\"" + $srcDir + "\")\n" +
+    "from tools import handRigger\n" +
+    "import importlib\n" +
+    "importlib.reload(handRigger)\n" +
+    "handRigger.Run()";
 
     string $currentShelf = `tabLayout -q -selectTab "ShelfLayout"`;
     setParent $currentShelf; 
@@ -40,6 +47,5 @@ global proc AddPluginToShelf(string $scriptName, string $label)
     shelfButton -c $command -stp "python" -image $iconPath -l $label -iol $label;
 }
 
-AddPluginToShelf("limbRigger", "Limb Rigger");
-AddPluginToShelf("mayaToUE", "Maya To UE");
+AddPluginToShelf("handRigger", "Hand Rigger");
 
