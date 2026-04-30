@@ -115,7 +115,7 @@ class HandRiggerWidget(MayaWidget):
         btn.clicked.connect(self.SetName)
         row.addWidget(btn)
 
-        #color picker
+        #color picker button
         colorBtn = QPushButton("Pick Color")
         colorBtn.clicked.connect(self.PickColor)
         layout.addWidget(colorBtn)
