@@ -58,7 +58,10 @@ class HandRigger:
         
         wristJnt = selection[0]
 
-        fingers = mc.listRelatives(wristJnt, children=True, type="joint") or []
+        fingers = [
+        jnt for jnt in mc.listRelatives(wristJnt, ad=True, type="joint") or []
+        if jnt.endswith("_01")
+        ]
 
         if not fingers:
             mc.error("No finger joints found under wrist")
