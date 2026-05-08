@@ -31,6 +31,10 @@ The purpose of thye tool is to facilitate the process of rigging hands.
 
 # Requirements
 
+* Autodesk Maya
+
+* Pyside6
+
 * Finger root joints should follow the naming convention: _01
 
 For example:
