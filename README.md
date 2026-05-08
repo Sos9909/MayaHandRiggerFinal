@@ -7,6 +7,8 @@ The tool creates FK finger controllers for a hand rig in Autodesk Maya.
 
 The purpose of thye tool is to facilitate the process of rigging hands.
 
+<img src= "assets/handRiggerScreenshot.png" width=300>
+
 ---------------------------------------------
 
 # Features
@@ -30,6 +32,13 @@ The purpose of thye tool is to facilitate the process of rigging hands.
 # Requirements
 
 * Finger root joints should follow the naming convention: _01
+
+For example:
+
+* index_01
+* middle_01
+* ring_01
+* pinky_01
 
 -----------------------------------------------
 
